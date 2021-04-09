@@ -18,9 +18,10 @@ app.use('/static',express.static(path.join(__dirname,'public')))
 app.use('/assets',express.static(path.join(__dirname,'public/assets')))
 app.use(session({
   secret:uuidv4(),
-  resave:'faulse',
-  saveUnitialized:true
+  resave:'false',
+  saveUninitialized:true
 }));
+
 
 app.use('/route',router);
 //HOME ROUTE

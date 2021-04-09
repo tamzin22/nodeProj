@@ -5,6 +5,12 @@
           <div class="title p-5">
             <h2 class="font-weight-bold">Login System</h2>
             <span>Log In For Existing user</span>
+            <%if(locals.logout){%>
+              <div class="alert alert-success text-center">
+                <%= logout %>
+              </div>
+            <%}%>
+
           </div>
               <form action="/route/login" method="POST" class="pt-3">
                 <div class="form-group">
